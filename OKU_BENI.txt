@@ -1,0 +1,4 @@
+AUZEF Soru Bankam — Çocuk Hakları ve Hukuku
+2022–2023, 2023–2024, 2024–2025, 2025–2026: 20’şer vize sorusu (80). Ek 20 karma çalışma sorusu. Toplam 100 kayıt.
+GitHub deponuzun kök dizinine index.html ve sorular.json dosyalarını yükleyin.
+Kaynak: Kullanıcının gönderdiği sınav kitapçığı fotoğrafları/PDF ve cevap anahtarları. Bağımsız resmi cevap doğrulaması yapılmadı.
