@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUZEF Soru Bankam</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f1f5fb;margin:0;color:#20304a}
+header{background:#244db5;color:white;padding:28px 18px;text-align:center}
+main{max-width:600px;margin:auto;padding:20px}
+.card{background:white;padding:20px;margin:14px 0;border-radius:15px;box-shadow:0 3px 12px #0001}
+button{background:#244db5;color:white;border:0;padding:13px;border-radius:9px;width:100%;font-size:16px;margin-top:10px}
+.option{background:#edf2ff;color:#20304a;text-align:left}
+.correct{background:#b8ebc5}.wrong{background:#ffd1d1}
+</style>
+</head>
+<body>
+<header><h1>📚 AUZEF Soru Bankam</h1><p>Çocuk Gelişimi • 3. Sınıf</p></header>
+<main>
+<div class="card"><h2>Hoş geldiniz!</h2><p>Derslerini seç, soruları çöz ve sınavlara hazırlan.</p></div>
+<div class="card"><h3>📝 Örnek Test</h3><p id="question">Piaget'ye göre 2-7 yaş aralığı hangi bilişsel gelişim dönemidir?</p><div id="options"></div><p id="result"></p></div>
+<div class="card"><h3>📖 Dersler</h3><p>3. sınıf dersleri ve çıkmış sorular yakında eklenecek.</p></div>
+</main>
+<script>
+const answers=["Duyusal motor dönem","İşlem öncesi dönem","Somut işlemler dönemi","Soyut işlemler dönemi"];
+const area=document.getElementById("options");
+answers.forEach((answer,i)=>{
+const b=document.createElement("button");
+b.className="option";b.textContent=answer;
+b.onclick=()=>{
+document.querySelectorAll(".option").forEach(x=>x.disabled=true);
+b.className=i===1?"option correct":"option wrong";
+document.getElementById("result").textContent=i===1?"✅ Doğru cevap!":"❌ Yanlış. Doğru cevap: İşlem öncesi dönem.";
+};
+area.appendChild(b);
+});
+</script>
+</body>
+</html>
